@@ -66,9 +66,7 @@ jobs:
 
     - name: Setup Android SDK
       run: |
-        $ANDROID_SDK_ROOT/tools/bin/sdkmanager --uninstall \
-          "platforms;android-33-ext5" "platforms;android-33-ext4" \
-          "platforms;android-33" "platforms;android-32"
+        $ANDROID_SDK_ROOT/tools/bin/sdkmanager tools platform-tools
         $ANDROID_SDK_ROOT/tools/bin/sdkmanager "ndk;25.1.8937393"
         echo "$ANDROID_NDK_ROOT/prebuilt/$ANDROID_NDK_HOST/bin" >> $GITHUB_PATH
 
